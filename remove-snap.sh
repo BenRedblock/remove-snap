@@ -23,8 +23,7 @@ if [ "$(id -u)" -ne  0 ]; then
     exit  99
 fi
 echo -e "${RED}This will also uninstall the snap version of firefox.${RESET}"
-echo -e "${GREEN}Are you sure you want to remove all installed snaps? (y/n): ${RESET}"
-read answer
+read -p "Are you sure you want to remove all installed snaps? (y/n): " answer
 
 # Process the answer
 if [[ $answer == [yY] ]]; then
@@ -98,8 +97,7 @@ sudo rm -rf /snap
 sudo rm -rf /var/snap
 sudo rm -rf /var/lib/snapd
 
-echo -e  "${GREEN}Do you want to install flatpak? (y/n): ${RESET}"
-read answer
+read -p "${GREEN}Do you want to install flatpak? (y/n): ${RESET}" answer
 
 # Process the answer
 if [[ $answer == [yY] ]]; then
@@ -113,8 +111,7 @@ apt update
 
 apt install flatpak -y
 
-echo -e "${GREEN}Do you want to install the 'gnome-software-plugin-flatpak' package? (y(recommended)/n): ${RESET}"
-read answer
+read -p "${GREEN}Do you want to install the 'gnome-software-plugin-flatpak' package? (y(recommended)/n): ${RESET}" answer
 
 if [[ $answer == [nN] ]]; then
 	echo -e "${GREEN}continuing without the 'gnome-software-plugin-flatpak'${RESET}"
