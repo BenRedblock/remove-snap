@@ -97,7 +97,7 @@ sudo rm -rf /snap
 sudo rm -rf /var/snap
 sudo rm -rf /var/lib/snapd
 
-read -p "${GREEN}Do you want to install flatpak? (y/n): ${RESET}" answer
+read -p "Do you want to install flatpak? (y/n): " answer
 
 # Process the answer
 if [[ $answer == [yY] ]]; then
@@ -111,7 +111,7 @@ apt update
 
 apt install flatpak -y
 
-read -p "${GREEN}Do you want to install the 'gnome-software-plugin-flatpak' package? (y(recommended)/n): ${RESET}" answer
+read -p "Do you want to install the 'gnome-software-plugin-flatpak' package? (y(recommended)/n): " answer
 
 if [[ $answer == [nN] ]]; then
 	echo -e "${GREEN}continuing without the 'gnome-software-plugin-flatpak'${RESET}"
