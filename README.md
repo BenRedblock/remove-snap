@@ -7,5 +7,7 @@
 > To use this script, simply run the following command in your terminal:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/BenRedblock/remove-snap/main/remove-snap.sh | bash
+curl -fsSL -o remove-snap.sh https://raw.githubusercontent.com/BenRedblock/remove-snap/main/remove-snap.sh
+chmod +x remove-snap.sh
+./remove-snap.sh
 ```
